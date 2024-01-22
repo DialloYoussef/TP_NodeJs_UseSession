@@ -1,0 +1,36 @@
+<%- include('header') -%>
+
+<div class="max-w-md mx-auto mt-8">
+  <div class="bg-white p-6 rounded-lg shadow-md">
+    <h1 class="text-3xl font-bold mb-4">Modifier un Utilisateur</h1>
+
+    <!-- Formulaire de modification d'utilisateur -->
+    <form method="post" action="/edit-user/<%= userId %>">
+      <div class="mb-4">
+        <label class="block text-gray-700 text-sm font-bold mb-2" for="nom">Nom:</label>
+        <input type="text" name="nom" id="nom" value="<%= user.nom %>" class="w-full border rounded-md py-2 px-3">
+      </div>
+      
+      <div class="mb-4">
+        <label class="block text-gray-700 text-sm font-bold mb-2" for="prenom">Prénom:</label>
+        <input type="text" name="prenom" id="prenom" value="<%= user.prenom %>" class="w-full border rounded-md py-2 px-3">
+      </div>
+
+      <div class="mb-4">
+        <label class="block text-gray-700 text-sm font-bold mb-2" for="photo">Photo (lien):</label>
+        <input type="text" name="photo" id="photo" value="<%= user.photo %>" class="w-full border rounded-md py-2 px-3">
+      </div>
+
+      <div class="mb-4">
+        <label class="block text-gray-700 text-sm font-bold mb-2" for="dateInscription">Date d'Inscription:</label>
+        <input type="text" name="dateInscription" id="dateInscription" value="<%= user.dateInscription %>" class="w-full border rounded-md py-2 px-3">
+      </div>
+
+      <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+        Enregistrer les modifications
+      </button>
+    </form>
+  </div>
+</div>
+
+<%- include('footer') -%>

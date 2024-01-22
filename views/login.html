@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulaire de Connexion</title>
+    <!-- Inclure Tailwind CSS (assurez-vous d'avoir configuré votre projet pour cela) -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <!-- Inclure Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+  </head>
+  <body class="bg-gray-200 flex items-center justify-center h-screen">
+    <div class="bg-white p-8 rounded shadow-md w-96">
+      <!-- Logo -->
+      <div class="mb-8 flex items-center justify-center">
+        <img src="img/fleur.jpg" alt="Logo" class="h-24 rounded-lg" />
+      </div>
+
+      <!-- Formulaire -->
+      <form action="/login" method="POST">
+        <!-- Champ Login -->
+        <div class="mb-4">
+          <label for="login" class="block text-gray-700 text-sm font-bold mb-2">
+            <i class="fas fa-user"></i> Login:
+          </label>
+          <div class="relative">
+            <input
+              type="text"
+              id="login"
+              name="login"
+              class="w-full p-3 border border-gray-300 rounded focus:outline-none focus:border-blue-500"
+            />
+          </div>
+        </div>
+
+        <!-- Champ Mot de passe -->
+        <div class="mb-6">
+          <label
+            for="password"
+            class="block text-gray-700 text-sm font-bold mb-2"
+          >
+            <i class="fas fa-lock"></i> Mot de passe:
+          </label>
+          <div class="relative">
+            <input
+              type="password"
+              id="password"
+              name="password"
+              class="w-full p-3 border border-gray-300 rounded focus:outline-none focus:border-blue-500"
+            />
+          </div>
+          <div class="mt-2 text-right">
+            <a href="#" class="text-blue-500 hover:underline"
+              >Mot de passe oublié ?</a
+            >
+          </div>
+        </div>
+
+        <!-- Bouton de Connexion -->
+        <button
+          type="submit"
+          class="w-full bg-blue-500 text-white p-3 rounded hover:bg-blue-600"
+        >
+          <i class="fas fa-sign-in-alt"></i> Se connecter
+        </button>
+      </form>
+    </div>
+  </body>
+</html>

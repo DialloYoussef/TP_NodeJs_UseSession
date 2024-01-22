@@ -1,0 +1,7 @@
+# Dossiers
+node_modules/
+uploads/
+
+# Fichiers
+.env
+.DS_Store
